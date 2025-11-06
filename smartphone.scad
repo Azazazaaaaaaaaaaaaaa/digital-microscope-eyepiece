@@ -4,8 +4,15 @@ r_round_corner = 15;
 smartphone();
 
 module smartphone(){
-    block();
-    cameras();
+    difference(){
+        scale([1,1.1,1])
+        block();
+        scale([0.95,0.95,0.95])
+        translate([0,0,1])
+        block();
+        cameras();
+    }
+    
 }
 
 module cameras(){
